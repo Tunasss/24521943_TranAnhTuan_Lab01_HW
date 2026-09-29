@@ -3,9 +3,15 @@ const root = document.documentElement;
 // ----- Theme toggle -----
 const themeToggle = document.querySelector('#theme-toggle');
 
+function syncThemeButton() {
+  themeToggle.setAttribute('aria-pressed', String(root.getAttribute('data-theme') === 'dark'));
+}
+syncThemeButton();
+
 themeToggle.addEventListener('click', () => {
   const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
   root.setAttribute('data-theme', next);
+  syncThemeButton();
   try {
     localStorage.setItem('theme', next);
   } catch (error) {
@@ -13,17 +19,34 @@ themeToggle.addEventListener('click', () => {
   }
 });
 
-// ----- Mobile navigation toggle -----
+// ----- Mobile navigation -----
 const navToggle = document.querySelector('#nav-toggle');
 const siteNav = document.querySelector('#site-nav');
 
+function openNav() {
+  siteNav.classList.add('open');
+  navToggle.setAttribute('aria-expanded', 'true');
+  siteNav.querySelector('a').focus();          // move focus into the menu
+}
+
+function closeNav(returnFocus = false) {
+  siteNav.classList.remove('open');
+  navToggle.setAttribute('aria-expanded', 'false');
+  if (returnFocus) navToggle.focus();          // give focus back to the trigger
+}
+
 navToggle.addEventListener('click', () => {
-  siteNav.classList.toggle('open');
+  if (siteNav.classList.contains('open')) closeNav();
+  else openNav();
 });
 
 siteNav.addEventListener('click', (event) => {
-  if (event.target.tagName === 'A') {
-    siteNav.classList.remove('open');
+  if (event.target.closest('a')) closeNav();
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && siteNav.classList.contains('open')) {
+    closeNav(true);
   }
 });
 
