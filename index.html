@@ -12,7 +12,7 @@
   <header class="site-header" id="top">
     <a class="logo" href="#top">Your<span>Name</span></a>
 
-    <nav id="site-nav" class="site-nav">
+    <nav id="site-nav" class="site-nav" aria-label="Main">
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -30,12 +30,15 @@
     </div>
   </header>
 
-  <main>
-    <section class="hero">
+    <a class="skip-link" href="#main">Skip to main content</a>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
       <img class="avatar" src="assets/avatar.svg" alt="Portrait of Your Name" width="160" height="160">
       <div class="hero-text">
         <p class="eyebrow">Web developer in training</p>
-        <h1>Hi, I'm Your Name</h1>
+        <h1 id="hero-title">Hi, I'm Your Name</h1>
         <p class="subtitle">I build clean, fast and accessible websites with HTML, CSS and JavaScript.</p>
         <div class="hero-buttons">
           <a class="button" href="#projects">See my work</a>
@@ -44,8 +47,8 @@
       </div>
     </section>
 
-    <section id="about">
-      <h2>About</h2>
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About</h2>
       <p>
         I am a student learning modern web development. I enjoy building small,
         useful projects, and I care about accessibility, performance and
@@ -54,32 +57,32 @@
       </p>
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
       <div class="cards" data-loading>
         <article class="card">
           <h3>Drum Kit</h3>
           <p>A keyboard-driven drum kit with polyphonic playback and a beat recorder.</p>
           <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
-          <a href="https://github.com/your-username/your-repo">View on GitHub</a>
+          <a href="https://github.com/your-username/your-repo">View on GitHub<span class="visually-hidden"> (Drum Kit)</span></a>
         </article>
         <article class="card">
           <h3>Weather App</h3>
           <p>Shows the current weather for a searched city using a public API.</p>
           <ul class="tags"><li>JavaScript</li><li>REST API</li></ul>
-          <a href="https://github.com/your-username/weather-app">View on GitHub</a>
+          <a href="https://github.com/your-username/weather-app">View on GitHub<span class="visually-hidden"> (Weather App)</span></a>
         </article>
         <article class="card">
           <h3>Todo List</h3>
           <p>A simple task manager that keeps its data between visits.</p>
           <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
-          <a href="https://github.com/your-username/todo-list">View on GitHub</a>
+          <a href="https://github.com/your-username/todo-list">View on GitHub<span class="visually-hidden"> (Todo List)</span></a>
         </article>
       </div>
     </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
+    <section id="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills</h2>
       <ul class="skills">
         <li>HTML5</li>
         <li>CSS3</li>
@@ -90,7 +93,8 @@
       </ul>
     </section>
 
-    <section id="contact">
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
       <div class="contact-box">
         <h2>Let's work together</h2>
         <p>Have a project in mind or just want to say hello?</p>
@@ -109,4 +113,6 @@
 
   <script src="js/main.js" defer></script>
 </body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
 </html>
