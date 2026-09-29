@@ -1,0 +1,11 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "scripts": {
+    "build": "terser js/theme.js -c -m -o js/theme.min.js && terser js/main.js -c -m -o js/main.min.js && csso css/style.css -o css/style.min.css"
+  },
+  "devDependencies": {
+    "terser": "^5.0.0",
+    "csso-cli": "^4.0.0"
+  }
+}
