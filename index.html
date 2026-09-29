@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name - Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Runs before first paint so the saved theme is applied without a flash -->
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="logo" href="#top">Your<span>Name</span></a>
+
+    <nav id="site-nav" class="site-nav">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button id="theme-toggle" class="icon-button" type="button" aria-label="Toggle dark mode">
+        <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+      <button id="nav-toggle" class="nav-toggle" type="button">Menu</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img class="avatar" src="assets/avatar.svg" alt="Portrait of Your Name" width="160" height="160">
+      <div class="hero-text">
+        <p class="eyebrow">Web developer in training</p>
+        <h1>Hi, I'm Your Name</h1>
+        <p class="subtitle">I build clean, fast and accessible websites with HTML, CSS and JavaScript.</p>
+        <div class="hero-buttons">
+          <a class="button" href="#projects">See my work</a>
+          <a class="button button-outline" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I am a student learning modern web development. I enjoy building small,
+        useful projects, and I care about accessibility, performance and
+        readable code. Right now I am learning how to ship production-quality
+        sites with small, well-documented commits.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="cards" data-loading>
+        <article class="card">
+          <h3>Drum Kit</h3>
+          <p>A keyboard-driven drum kit with polyphonic playback and a beat recorder.</p>
+          <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+          <a href="https://github.com/your-username/your-repo">View on GitHub</a>
+        </article>
+        <article class="card">
+          <h3>Weather App</h3>
+          <p>Shows the current weather for a searched city using a public API.</p>
+          <ul class="tags"><li>JavaScript</li><li>REST API</li></ul>
+          <a href="https://github.com/your-username/weather-app">View on GitHub</a>
+        </article>
+        <article class="card">
+          <h3>Todo List</h3>
+          <p>A simple task manager that keeps its data between visits.</p>
+          <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+          <a href="https://github.com/your-username/todo-list">View on GitHub</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript (ES6+)</li>
+        <li>Git &amp; GitHub</li>
+        <li>Responsive design</li>
+        <li>Web accessibility</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <div class="contact-box">
+        <h2>Let's work together</h2>
+        <p>Have a project in mind or just want to say hello?</p>
+        <a class="button" href="mailto:you@example.com">you@example.com</a>
+        <ul class="contact-links">
+          <li><a href="https://github.com/your-username">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/your-username">LinkedIn</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> Your Name. Built with HTML, CSS and JavaScript.</p>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
